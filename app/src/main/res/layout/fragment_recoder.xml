@@ -6,6 +6,8 @@
     android:background="@drawable/record_back"
     android:layout_height="match_parent"
     tools:context=".RecoderFragment">
+
+
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">
@@ -13,67 +15,91 @@
 
         <ImageView
             android:id="@+id/imageView2"
-            android:layout_width="wrap_content"
-            android:layout_height="250dp"
-            android:layout_marginTop="40dp"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_marginTop="30dp"
             android:src="@drawable/voiceii"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="MissingConstraints" />
 
-        <TextView
-            android:id="@+id/recoard_title"
-            android:layout_width="0dp"
+
+        <LinearLayout
+            android:id="@+id/linearLayout3"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginStart="50dp"
-            android:layout_marginLeft="50dp"
-            android:layout_marginEnd="50dp"
-            android:layout_marginRight="50dp"
-            android:fontFamily="@font/poppins"
-            android:text="Hello Voice Recoder Title here Voice Recoder Title here Voice Recoder Title here"
-            android:textColor="@color/black"
-            android:textSize="18dp"
-            app:layout_constraintBottom_toTopOf="@+id/chronometer"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/imageView2" />
+            android:gravity="center"
+            android:orientation="vertical"
+            app:layout_constraintTop_toBottomOf="@+id/imageView2">
 
-        <Chronometer
-            android:id="@+id/chronometer"
-            android:layout_width="wrap_content"
+            <TextView
+                android:id="@+id/audio_file_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="30dp"
+                android:fontFamily="@font/poppins"
+                android:gravity="center"
+                android:text="Audio text hgfghd jhhgjh mp3"
+                android:textAlignment="center"
+                android:textColor="@color/black"
+                android:textSize="14dp" />
+
+
+            <Chronometer
+                android:id="@+id/chronometer1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:layout_marginBottom="30dp"
+                android:textColor="@color/purple_700"
+                android:textSize="40dp"
+                app:layout_constraintBottom_toTopOf="@+id/recoard_btn"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <ImageView
+                android:id="@+id/recoard_btn"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:src="@drawable/record_off" />
+
+            <ImageView
+                android:id="@+id/backpage_btn"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_marginTop="40dp"
+                android:src="@drawable/wave" />
+
+
+        </LinearLayout>
+
+
+
+
+        <LinearLayout
+            android:id="@+id/linearLayout4"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="50dp"
-            android:textColor="@color/purple_700"
-            android:textSize="66dp"
-            app:layout_constraintBottom_toTopOf="@+id/recoard_btn"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent" />
+            android:gravity="center"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toBottomOf="parent" >
 
 
-        <ImageView
-            android:id="@+id/recoard_btn"
-            android:layout_width="120dp"
-
-            android:layout_height="120dp"
-            android:layout_marginBottom="150dp"
-            android:src="@drawable/record_off"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.498"
-            app:layout_constraintStart_toStartOf="parent" />
-
-        <ImageView
-            android:id="@+id/nav_btn"
-            android:layout_width="50dp"
-            android:layout_height="50dp"
-            android:src="@drawable/nav_btn"
-            app:layout_constraintBottom_toBottomOf="@+id/recoard_btn"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toEndOf="@+id/recoard_btn"
-            app:layout_constraintTop_toTopOf="@+id/recoard_btn" />
+            <com.google.android.gms.ads.AdView
+                xmlns:ads="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/adView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                ads:adSize="BANNER"
+                ads:adUnitId="@string/admob_banner_id">
+            </com.google.android.gms.ads.AdView>
+        </LinearLayout>
 
     </androidx.constraintlayout.widget.ConstraintLayout>
-
 
 
 </FrameLayout>

@@ -4,7 +4,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:background="@color/mediacolor"
+    android:background="@drawable/playlist_backround"
     app:layout_behavior="com.google.android.material.bottomsheet.BottomSheetBehavior"
     app:behavior_hideable="true"
     app:behavior_peekHeight="70dp"
@@ -24,8 +24,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="4"
-            android:paddingTop="16dp"
-            android:paddingBottom="16dp"
+            android:paddingTop="24dp"
+            android:paddingBottom="24dp"
             android:src="@drawable/ic_music" />
 
         <TextView
@@ -34,8 +34,8 @@
             android:layout_height="wrap_content"
             android:layout_weight="3"
             android:fontFamily="@font/poppins"
-            android:paddingTop="16dp"
-            android:paddingBottom="16dp"
+            android:paddingTop="24dp"
+            android:paddingBottom="24dp"
             android:text="Media Player"
             android:textColor="@color/white"
             android:textSize="16sp" />
@@ -47,7 +47,7 @@
             android:layout_weight="3"
             android:fontFamily="@font/poppins"
             android:gravity="end"
-            android:paddingTop="16dp"
+            android:paddingTop="24dp"
             android:paddingEnd="24dp"
             android:paddingRight="24dp"
             android:paddingBottom="16dp"

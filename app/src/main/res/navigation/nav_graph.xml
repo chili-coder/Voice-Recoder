@@ -9,10 +9,24 @@
         android:id="@+id/recoderFragment"
         android:name="com.sohaghlab.voicerecoder.RecoderFragment"
         android:label="fragment_recoder"
-        tools:layout="@layout/fragment_recoder" />
+        tools:layout="@layout/fragment_recoder" >
+        <action
+            android:id="@+id/action_recoderFragment_to_listFragment"
+            app:destination="@id/listFragment"
+            app:enterAnim="@anim/fade_in"
+            app:exitAnim="@anim/fade_out"
+           />
+    </fragment>
     <fragment
         android:id="@+id/listFragment"
         android:name="com.sohaghlab.voicerecoder.ListFragment"
         android:label="fragment_list"
-        tools:layout="@layout/fragment_list" />
+        tools:layout="@layout/fragment_list" >
+        <action
+            android:id="@+id/action_listFragment_to_recoderFragment"
+            app:destination="@id/recoderFragment"
+            app:enterAnim="@anim/fade_out"
+            app:exitAnim="@anim/fade_in"
+            />
+    </fragment>
 </navigation>
